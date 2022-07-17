@@ -10,35 +10,43 @@
 <body>
     <h1>Follow Up Form</h1>
     <h2>Please fill out the form to request a follow up from the Doctor.</h2>
-
-    <form id="" >
-        First name: <input type="text" name="first"><br>
-        Last name: <input type="text" name="last"><br><br>
-        Email: <input type="email" name="email"><br>
-        Desired Appointment Date: <input type="date" name="date"><br>
+    <form>
+        First name: <input id="fname" type="text" name="first"><br>
+        Last name: <input id="lname" type="text" name="last"><br><br>
+        Email: <input id="addy" type="email" name="email" required><br>
+        Desired Appointment Date: <input id="appt" type="date" name="date"><br>
         <label for="insurance">Do you have insurance?</label>
         <select name="insurance" id="insurance">
             <option value="yes">Yes</option>
             <option value="no">No</option>
           </select>
         <p>Do you request an immediate callback from the nurse?</p>
-            <input type="checkbox" id="callback1" name="callback1" value="callback">
+        <div>
+            <input class="clickbox" type="checkbox" id="callback1" name="callback1" value="callback" required>
             <label for="callback1"> I need a callback.</label><br>
-            <input type="checkbox" id="callback2" name="callback2" value="nocallback">
+            <input class="clickbox" type="checkbox" id="callback2" name="callback2" value="nocallback" required>
             <label for="callback2"> I don't need a callback.</label><br>
+        </div>
         <p>What time of day do you prefer to be contacted?</p>
-            <input type="radio" id="time1" name="preferredtime1" value="AM">
+        <input class= "rselect" type="radio" id="time1" name="preferredtime1" value="AM">
         <label for="AM">AM</label><br>
-        <input type="radio" id="time2" name="preferredtime1" value="PM">
+        <input class= "rselect" type="radio" id="time2" name="preferredtime1" value="PM">
         <label for="PM">PM</label><br>
-        <input type="radio" id="time3" name="preferredtime1" value="No Preference">
+        <input class= "rselect" type="radio" id="time3" name="preferredtime1" value="No Preference">
         <label for="No Preference">No Preference</label><br> 
-         
         <label for="comments">Comments and Questions</label>
-        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
-        <input type="submit" value="Submit">
+        <textarea id="comments" name="comments" rows="4" cols="50" required></textarea>
+        <input id="submit" type="submit" value="Submit">
       </form> 
-      
+      <h3 id="first"></h3>
+      <h3 id="last"></h3>
+      <h3 id="eaddress"></h3>
+      <h3 id="date"></h3>
+      <h3 id="coverage"></h3>
+      <h3 id="call"></h3>
+      <h3 id="time"></h3>
+      <h3 id="notes"></h3>
+
     <script src="index.js" type="text/javascript"></script>
   </body>
 </html>
